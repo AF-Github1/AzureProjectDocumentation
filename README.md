@@ -3,11 +3,19 @@ Self learning Azure documentation
 
 
 
+PAGE CURRENTLY IN THE PROCESS OF EDITING
+
+
+
+
+
+
+
 **Read this before doing anything else**
 
 **If you intend to make use of student benefits**
 
-Azure has been a bit finicky relating to student login for me. After multiple attempts of logging in to my student account/converting my normal account to a student account I eventually landed upon this particular site and went through the apply link at the top of the page. 
+Azure has been a bit finicky relating to student login for me. After multiple attempts of logging in to my student account/converting my normal account to a student account I eventually landed upon this particular site(https://azure.microsoft.com/en-us/pricing/offers/ms-azr-0170p/) and went through the apply link at the top of the page. 
 
 I am currently unsure if this was this particular link that finally managed to confirm my student status, or if the Azure platform takes its time to confirm my status.
 
