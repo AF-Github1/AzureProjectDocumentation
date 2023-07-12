@@ -33,19 +33,117 @@ You can check your credits by going to the search box in the main page and writi
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/fd19836c-336d-4b1f-96e0-f1f3bb20df71)
 
 
+**Relevant Links**
+
+**Main site
+**
+https://portal.azure.com/
+
+**Documentation
+**
+https://learn.microsoft.com/en-ca/azure/?product=popular
+
+**What will be handled in this document**
+
+Understanding Azure’s Virtual Machines
+	Creation
+	Management
+	Editing
+	Access	
+
+Understanding Azure’s features and solutions
+	Role of a Resource Group
+	Implementing services in your VMs
+Azure Storage Account
+	Creation
+	Management
+		Containers
+		File Shares (Windows and Linux)
+		Website Hosting
+
+**Login information**
+
+These are the credentials used for every machine unless stated otherwise. Feel free to use your own.
+
+Username: administrator_enta
+Password: Passw0rd@ENTA
+
+
+**Creating your first virtual machine in Azure**
+
+If you have handled other cloud platforms like AWS then this will be mostly intuitive to you but I would still recommend reading through this as there are some differences.
 
 
 
+After having successfully logged in to your account, from the main page either through the top left dropdown menu or the search box, look for the Virtual machines option and select it
 
 
+![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/722f4947-ed9c-496a-845b-0f1b678b4f45)
 
 
+Then press the create button in the middle of the screen. 
+The option chosen should be Azure virtual machine.
+
+Azure virtual machine preset configuration lets you pick between a few pre configured presets before letting you customize your machine much like the previous option
+
+The last 2 options require you to create a private cloud. This option is unavailable to me as the Student Subscription does not let me access this feature so it will not be discussed here.
 
 
+![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/261da530-7a8d-46c4-90ea-a241eba36139)
+
+**The Basics tab**
 
 
+**Subscription**
 
+The paid or offered service from which the costs of operating your machine will be deducted and will also define what are the services you can access. I chose Azure for Students, pick according to your own subscriptions.
 
+**Resource Group**
+
+Can aggregate numerous other machines, services that can be assigned to your machine or serve as a tracker to the costs of any created machine that uses the resource group. Choose a name and create a new resource group if you don’t already have one.
+
+**Virtual machine name**
+
+How the machine will be identified in the interface. Call it what you will.
+
+**Region**
+
+Location of the servers where the machine will be hosted. To note that different regions may have different availability of services, redundancy features or differences in latency. 
+Leave this in its default state for now.
+
+**Security Type**
+
+Defines the amount of protection machines will have, highest being confidential. You may leave this in its default state.
+
+To note, you can’t change the security type of a virtual machine after it has launched. And certain security types will not work with some of the operating systems.
+
+**Image**
+
+The specific operating system you want for your machine. Choose what you prefer, taking in account that the security type chosen previously may not be available.
+
+**VM architecture**
+
+This relates to processor speeds. Arm64 are less powerful but more cost efficient. Again, the option to choose between them will depend on the Security Type and Image chosen previously. 
+
+This information doesn’t particularly matter because pricing of the machine seems to be affected only by the Size and Disks chosen. So always pick the best option here if you can, which should be x64 which so happens to be the default state when available.
+
+**Azure Spot Discount**
+
+Azure enables users to get a discount on currently unused resources, with the condition that if Azure suddenly needs to make use of said resources, it will boot out any machines making use of them, interrupting their processes or even deleting the machines, although this action is left to the user to choose. Leave this blank.
+
+**Size**
+
+Your disk size and RAM are initially picked together. To add more space you will need to go to the Disks tab which we will handle a bit further later in this document. For now, a Windows machine should be more than fine with 8GB of ram, with Linux you can go down to 2 gb, unless you will make use of a graphical interface.
+
+**Administrator account**
+
+Give it whatever credentials you want. I personally used the ones in the Login Information section.
+
+**Inbound port rules**
+
+This defines the initial access configurations.
+
+You should leave the 3389 port for RDP open in order to use a remote desktop client to enter your machine. You can also just directly configure any of the inbound rule settings after the machine has launched through the Networking tab after selecting the machine you want to configure.
 
 
 
