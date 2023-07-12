@@ -5,8 +5,7 @@ Self learning Azure documentation
 
 **Read this before doing anything else**
 
-**If you intend to make use of student benefits
-**
+**If you intend to make use of student benefits**
 
 Azure has been a bit finicky relating to student login for me. After multiple attempts of logging in to my student account/converting my normal account to a student account I eventually landed upon this particular site and went through the apply link at the top of the page. 
 
@@ -14,12 +13,12 @@ I am currently unsure if this was this particular link that finally managed to c
 
 Regardless, I have now access to my free student benefits and can confirm for fellow ENTA students that the student offer as of the moment of writing this section (05/07/2023) is still functional.
 
-**Student benefit limitations
-**
+**Student benefit limitations**
+
 There are a few services you will not be able to access on a student subscription. But more problematic, there is a limit on how many public IPs and CPUs you can make use of at any time. As such you will not only be limited by your credits, but by what the platform enables you to do or create.
 
-**If this is your first time using this sort of platform
-**
+**If this is your first time using this sort of platform**
+
 Free credits in a 12 month period does not mean complete free unlimited use of Azure resources for 12 months. 
 
 More powerful machines will imply a larger price per hour which will be deducted from your credits. 
@@ -35,12 +34,12 @@ You can check your credits by going to the search box in the main page and writi
 
 **Relevant Links**
 
-**Main site
-**
+**Main site**
+
 https://portal.azure.com/
 
-**Documentation
-**
+**Documentation**
+
 https://learn.microsoft.com/en-ca/azure/?product=popular
 
 **What will be handled in this document**
@@ -144,6 +143,105 @@ Give it whatever credentials you want. I personally used the ones in the Login I
 This defines the initial access configurations.
 
 You should leave the 3389 port for RDP open in order to use a remote desktop client to enter your machine. You can also just directly configure any of the inbound rule settings after the machine has launched through the Networking tab after selecting the machine you want to configure.
+
+![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/ab501892-323d-47b4-83e4-7499d3ae8c02)
+
+
+If at any time you are unsure about what is the actual price of the machine you created, microsoft provides its own pricing calculator where you can simulate how expensive a machine you create will be. It is free to use.
+
+https://azure.microsoft.com/en-us/pricing/calculator/
+
+
+**The Disks tab**
+
+![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/d59ea17c-ed2c-4e1f-aac1-921cf39fb602)
+
+
+**VM disk encryption**
+
+As a student account using a student subscription I do not have access to this feature so it will not be discussed
+
+**OS disk**
+
+Choice between SSD or HDD disks. SSD will be faster but more expensive. We won’t need any particularly fast disk so choose HDD.
+
+Pricing and characteristics are must better explained in Azure’s own documentation so check the following link if you want a more in depth look
+
+https://learn.microsoft.com/en-ca/azure/virtual-machines/disks-types
+
+Tick the Delete with VM box so you get rid of the disk when you delete the machine.
+
+**Key management**
+
+Key used for encrypting the disk. Not a choice here as we do not have access to disk encryption. As such the default option is the only option.
+
+**Ultra disk compatibility**
+
+The most powerful option for disks. Completely unnecessary for an example and significantly more expensive. Do not tick this box.
+
+**Data Disks**
+
+Enables creating additional disks besides the one where your OS will be installed on. It follows the same rules as before with a few additional options
+
+
+![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/b08cc03b-897e-4e8d-8767-9f65f6cef489)
+
+
+**Source Type**
+
+If you already have disk images, you can add them here. In our case we are making a fresh disk so leave this on None
+
+**Size**
+
+Same as before, change it to a more reasonable size and type of disk.
+
+**Shared Disk**
+
+If you are going to share your disk with multiple machines then you will need to tick yes. Since this is only an example, leave it on no.
+
+And again don't forget to tick ‘Delete disk with VM’, unless you have enabled disk sharing, as enabling disk sharing will disable this option.
+
+
+
+
+**The Networking tab**
+
+
+![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/1d8d93d2-fc76-489a-8774-d5a13c062cb9)
+
+Virtual Network
+
+If you haven’t already you will need to create a virtual network for your machine. After choosing create new you should be able to see a default choice for an address range. You can choose that one for now, but feel free to specify your own.
+
+![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/f4792a77-03ae-41a8-93e3-b17e1d47decc)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
