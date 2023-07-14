@@ -257,7 +257,7 @@ Can be useful if you plan to keep a machine around and want to keep it shutdown 
 Enables creating of backups for your machine on the side of Azure in case of loss of data/functionality. It does have a cost associated.
 
 
-**The Monitoring Tab**
+# The Monitoring Tab
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/83f39a37-85ad-4075-9778-706ccbffae44)
 
@@ -546,8 +546,7 @@ Run the following text in a bash file. Replace your-resource-group and your-stor
 Remember to give out any necessary permissions with chmod.
 
 
-—---
-
+```
 #!/bin/bash
 
 RESOURCE_GROUP_NAME="your-resource-group"
@@ -562,12 +561,11 @@ SMBPATH=$(echo $HTTP_ENDPOINT | cut -c7-${#HTTP_ENDPOINT})
 FILE_HOST=$(echo $SMBPATH | tr -d "/")
 
 nc -zvw3 $FILE_HOST 445
-
-—---
+```
 
 Make another bash where again you replace the names for your own
 
-
+```
 #!/bin/bash
 
 
@@ -580,12 +578,12 @@ MNT_PATH="$MNT_ROOT/$STORAGE_ACCOUNT_NAME/$FILE_SHARE_NAME"
 
 sudo mkdir -p $MNT_PATH
 
-—---
+```
 
 
 Afterward it's only a matter of running this inside another bash script.  Again change the names on the document for the names you chose for your own fileshares/storage accounts/resource groups 
 
-
+```
 #!/bin/bash
 
 # This command assumes you have logged in with az login
@@ -601,7 +599,7 @@ STORAGE_ACCOUNT_KEY=$(az storage account keys list \
     --query "[0].value" --output tsv | tr -d '"')
 
 sudo mount -t cifs $SMB_PATH /mount -o username=july10storage,password=$STORAGE_ACCOUNT_KEY,serverino,nosharesock,actimeo=30,mfsymlinks
-
+```
 
 
 
@@ -628,7 +626,7 @@ After saving it should show you the link to access your site. As we have yet to 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/9cc5a5ae-586b-438d-b99d-359bf2a794bc)
 
 
-Now if you haven’t already, create a Windows 10 VM. Its characteristics aren’t too important, just make sure it will have enough disk space for Visual Studio Code and its extensions and that you can actually access it.
+If you haven’t already, create a Windows 10 VM. Its characteristics aren’t too important, just make sure it will have enough disk space for Visual Studio Code and its extensions and that you can actually access it.
 
 Install Visual Studio Code in your machine
 
@@ -636,35 +634,37 @@ Press the extensions section in the left menu (should be the 5th option) and loo
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/90a81377-16ca-4f7d-9de5-a57187b0c21e)
 
-Now you will want to manually create a folder where you will store both your index.html and 404.html files.
+Create a folder where you will store both your index.html and 404.html files.
 
 I created it directly within one of my Storage Account file shares instead of a file inside the machine itself so even if I were to eventually delete the VM the configurations would not be lost, and would enable other VMs to potentially serve as backups.
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/38a5e6ae-df1f-4ce3-a444-c77db51a02b6)
 
-Now inside of each one of your html files you will add the following text
+Inside of each one of your html files you will add  following text
 
-index.html
+**index.html**
 
+```
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>This is a test for the documentation. ENTA</h1>
+    <h1>This is a test for  documentation. ENTA</h1>
   </body>
 </html>
+```
 
+**404.html**
 
-404.html
-
+```
 <!DOCTYPE html>
 <html>
   <body>
     <h1>CHECKING FOR 404</h1>
   </body>
 </html>
+```
 
-
-It doesn’t actually matter what text you pick it's just a way to identify the file
+It doesn’t actually matter what text you pick it's just a way to identify  file
 
 Now you will want to right click in the empty space below explorer and select the option ‘Deploy to Static Website via Azure Storage’
 
