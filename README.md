@@ -14,6 +14,18 @@ I am currently unsure if this was this particular link that finally managed to c
 
 Regardless, I have now access to my free student benefits and can confirm for fellow ENTA students that the student offer as of the moment of writing this section (05/07/2023) is still functional.
 
+# After talking with a colleague he found a consistent way to make sure you are able to login:
+
+Go through this link, after logging out of any Azure accounts
+
+https://azure.microsoft.com/en-gb/free/students/
+
+Login through Github (Github must be associated with your organization/school)
+
+You should see the Azure for students offer screen after this and it should enable you to login afterwards. When you go to the Education screen, you should see the 100 credits from your subscription
+
+
+
 **Student benefit limitations**
 
 There are a few services you will not be able to access on a student subscription. But more problematic, there is a limit on how many public IPs and CPUs you can make use of at any time. As such you will not only be limited by your credits, but by what the platform enables you to do or create.
