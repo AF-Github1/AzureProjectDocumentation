@@ -3,15 +3,8 @@ Self learning Azure documentation
 
 
 
-PAGE CURRENTLY IN THE PROCESS OF EDITING
 
-
-
-
-
-
-
-**Read this before doing anything else**
+# Read this before doing anything else
 
 **If you intend to make use of student benefits**
 
@@ -40,7 +33,7 @@ You can check your credits by going to the search box in the main page and writi
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/fd19836c-336d-4b1f-96e0-f1f3bb20df71)
 
 
-**Relevant Links**
+# Relevant Links
 
 **Main site**
 
@@ -50,7 +43,7 @@ https://portal.azure.com/
 
 https://learn.microsoft.com/en-ca/azure/?product=popular
 
-**What will be handled in this document**
+# What will be handled in this document
 
 Understanding Azure’s Virtual Machines
 	Creation
@@ -68,7 +61,7 @@ Azure Storage Account
 		File Shares (Windows and Linux)
 		Website Hosting
 
-**Login information**
+# Login information
 
 These are the credentials used for every machine unless stated otherwise. Feel free to use your own.
 
@@ -76,7 +69,7 @@ Username: administrator_enta
 Password: Passw0rd@ENTA
 
 
-**Creating your first virtual machine in Azure**
+# Creating your first virtual machine in Azure
 
 If you have handled other cloud platforms like AWS then this will be mostly intuitive to you but I would still recommend reading through this as there are some differences.
 
@@ -98,7 +91,7 @@ The last 2 options require you to create a private cloud. This option is unavail
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/261da530-7a8d-46c4-90ea-a241eba36139)
 
-**The Basics tab**
+# The Basics tab
 
 
 **Subscription**
@@ -160,7 +153,7 @@ If at any time you are unsure about what is the actual price of the machine you 
 https://azure.microsoft.com/en-us/pricing/calculator/
 
 
-**The Disks tab**
+# The Disks tab
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/d59ea17c-ed2c-4e1f-aac1-921cf39fb602)
 
@@ -212,7 +205,7 @@ And again don't forget to tick ‘Delete disk with VM’, unless you have enable
 
 
 
-**The Networking tab**
+# The Networking tab
 
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/1d8d93d2-fc76-489a-8774-d5a13c062cb9)
@@ -244,7 +237,7 @@ Refers to the security rules of what or can not enter your machine. Leave the 33
 Tick both boxes for deletion of public IP /NIC and accelerated networking. Accelerated networking is a free feature that enables better performance for your interfaces, although it is only enabled for certain VM sizes.
 
 
-**The Management tab**
+# The Management tab
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/6577da9e-52b3-434a-a8f8-b3aa4bd5b936)
 
@@ -285,7 +278,7 @@ Each option also has its own dropdown menu in order to customize the message con
 
 These options basically just define if you want logs to be generated for the booting of any of your VMs. We can leave this on its default setting.
 
-**The Advanced/Tags tab**
+# The Advanced/Tags tab
 
 Unlike the previous tabs, these ones are quite explicit in what each of their options do so I will not go into a lot of detail here. There are still a couple of important points
 
@@ -296,7 +289,7 @@ Otherwise, you can leave everything on its default settings.
 
 
 
-**The Review + Create Tab**
+# The Review + Create Tab
 
 Where you can see all of the configurations and options you have chosen in the previous tabs. 
 
@@ -325,7 +318,7 @@ As such if your needs change and you don’t wish to create another machine you 
 Although I won’t go in detail for every single option as it would either be mostly redundant or a bit too far out of my current knowledge base (like scripting or developing your own code to then implement on your sites), I will still focus on a few features that present something particularly relevant to know
 
 
-**Settings**
+# Settings
 
 **Networking**
 
@@ -343,20 +336,20 @@ Lets you pick different ways of accessing your machine. If you have enabled RDP,
 Unable to be used on a student subscription
 
 
-**Operations**
+# Operations
 
 This section handles updates, backup/disaster recovery and script injection
 
-**Monitoring**
+# Monitoring
 
 Handles resource utilization monitoring and alert customization. Equivalent to the Monitoring tab mentioned previously.
 
-**Automation**
+# Automation
 
 As the name implies, lets you define tasks like booting up/shutting down the machine at certain times, sending out alerts to emails and associating said taks with Azure provided services.
 
 
-**Help**
+# Help
 
 Mostly handles the accounting in AAA. Checks what a user has done on a machine and at what times, handles diagnostics, instance screenshots, lets a user redeploy the VM, change its password and even access the terminal through the browser
 
@@ -369,7 +362,7 @@ But after accessing the cmd through this window, it works just as you would expe
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/b488a766-34b9-4d00-b9aa-7990e0d72e69)
 
-**Azure Storage Account**
+# Azure Storage Account
 
 Azure Storage Account is a cloud service that lets you store numerous different types of data (sql database data, text, image, video, etc). 
 It is more cost effective and more convenient than creating a dedicated VM to store backup data or making disks, as it even enables you to ‘mount’ the account to different machines in the same Resource Group.
@@ -395,7 +388,7 @@ For the advanced tab every setting can be left on its default as it will not aff
 
 
 
-**Storage Account Networking tab **
+# Storage Account Networking tab 
 
 
 Controls what can access the storage account. If you choose to enable public access only to certain virtual networks/IPs, you will need to choose the same network in which your other VMs are.
@@ -411,7 +404,7 @@ If you are going to ever do anything important with any of your machines/storage
 
 Microsoft network routing handles traffic within the Azure network while Internet Routing lets traffic be routed over public internet. Generally you would choose internet routing if you have external users to the Azure platform, but in this case you can leave it to Microsoft network routing as it is faster.
 
-**Storage Account Data protection tab**
+# Storage Account Data protection tab
 
 This only really matters for any long term Storage Accounts where you would need to delete older data/want to keep older versions of data. You can leave everything in their default state.
 
@@ -419,18 +412,18 @@ This only really matters for any long term Storage Accounts where you would need
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/105122db-ed12-465d-b4f2-060a12f86142)
 
 
-**Storage Accounts Encryption Tab**
+# Storage Accounts Encryption Tab
 
 Defines on how you wish to handle encryption by either letting the platform handle it or providing your own key. Leave it in its default state for now.
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/4d202f45-9735-450c-abde-b98363202732)
 
-**Storage Accounts Review tab**
+# Storage Accounts Review tab
 
 Same as before, check if there are any changes you wish to make and press create when done.
 
 
-**Connecting your Azure Storage Account to your VM to share files**
+# Connecting your Azure Storage Account to your VM to share files
 
 Even if the Azure Storage Account is in the same Resource Group it doesn’t mean that VMs have automatic access to said account.
 
@@ -533,7 +526,7 @@ As you can see, the changes inside the VM changed the contents of the storage ac
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/34aa5eb6-9464-4b9c-8c7c-ea9780df7a79)
 
-**File share on Linux**
+# File share on Linux
 
 Install azure cli on your linux machine. I chose an Ubuntu VM so I used the appropriate command. Yours might be different
 
@@ -622,7 +615,7 @@ Regardless of how you went about it, checking the snapshots for your storage acc
 
 ![image](https://github.com/AF-Github1/AzureProjectDocumentation/assets/133685290/9d097b9a-3aab-481e-b834-f2d35536a1de)
 
-**Using your Azure Storage Account/Visual Studio Code to host a website through a Windows10 VM**
+# Using your Azure Storage Account/Visual Studio Code to host a website through a Windows10 VM
 
 Besides storing data, Storage Accounts can also serve as a hosting service for a static website.
 
