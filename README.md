@@ -8,13 +8,8 @@ Self learning Azure documentation
 
 **If you intend to make use of student benefits**
 
-Azure has been a bit finicky relating to student login for me. After multiple attempts of logging in to my student account/converting my normal account to a student account I eventually landed upon this particular site(https://azure.microsoft.com/en-us/pricing/offers/ms-azr-0170p/) and went through the apply link at the top of the page. 
-
-I am currently unsure if this was this particular link that finally managed to confirm my student status, or if the Azure platform takes its time to confirm my status.
-
-Regardless, I have now access to my free student benefits and can confirm for fellow ENTA students that the student offer as of the moment of writing this section (05/07/2023) is still functional.
-
-# After talking with a colleague he found a consistent way to make sure you are able to login:
+Azure has been a bit finicky relating to student login for a lot of people. 
+After talking with a colleague he found a consistent way to make sure you are able to login:
 
 Go through this link, after logging out of any Azure accounts
 
@@ -23,6 +18,10 @@ https://azure.microsoft.com/en-gb/free/students/
 Login through Github (Github must be associated with your organization/school)
 
 You should see the Azure for students offer screen after this and it should enable you to login afterwards. When you go to the Education screen, you should see the 100 credits from your subscription
+
+
+I have now access to my free student benefits and can confirm for fellow ENTA students that the student offer as of the moment of writing this section (05/07/2023) is still functional.
+
 
 
 
