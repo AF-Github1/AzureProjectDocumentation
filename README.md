@@ -68,9 +68,9 @@ Understanding Azure’s features and solutions
 Azure Storage Account
 	Creation
 	Management
-		Containers
-		File Shares (Windows and Linux)
-		Website Hosting
+	Containers
+	File Shares (Windows and Linux)
+	Website Hosting
 ```
 # Login information
 
