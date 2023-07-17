@@ -55,7 +55,7 @@ https://portal.azure.com/
 https://learn.microsoft.com/en-ca/azure/?product=popular
 
 # What will be handled in this document
-
+```
 Understanding Azure’s Virtual Machines
 	Creation
 	Management
@@ -71,7 +71,7 @@ Azure Storage Account
 		Containers
 		File Shares (Windows and Linux)
 		Website Hosting
-
+```
 # Login information
 
 These are the credentials used for every machine unless stated otherwise. Feel free to use your own.
